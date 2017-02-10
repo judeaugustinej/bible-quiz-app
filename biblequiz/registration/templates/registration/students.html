@@ -1,0 +1,25 @@
+{% extends 'registration/base.html' %}
+
+{% block content %}
+<h1>Registered Students</h1>
+<table class="table table-hover">
+    <th>Name</th>
+    <th>Language</th>
+    <th>Group</th>
+    <th>Age</th>
+    <th>Fee Payment</th>
+{% for student in students %}
+    <tr onclick=window.location.href="{% url 'student_detail' pk=student.pk %}">
+    <td>{{ student.full_name }} </td>
+    <td>{{ student.language }}</td>
+    <td>{{ student.group }}</td>
+    <td>{{ student.age }}</td>
+    <td>
+        {% if student.paid%} Paid
+        {% else %}
+        Not Paid
+    {% endif %}</td></tr>
+
+{% endfor %}
+    </table>
+{% endblock %}
