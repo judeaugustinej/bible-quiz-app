@@ -16,6 +16,10 @@ Testing
 2. Write selenium test
 3. Coverage report and Travis Job
 
+Best practices
+1. Django best practice
+2. javascript, css, best practice.
+
 Deployment
 1. Docker support
 2. Kuberets (learn about it man)
