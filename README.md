@@ -14,9 +14,9 @@
 
 * Install required libraries: $ pip install -r requirements.txt 
 
-* Change directory to suf: $ cd bible-quiz-app/biblequiz
+* Change directory to biblequiz app: $ cd bible-quiz-app/biblequiz
 
-* Create database and a superuser
+* Run migrations and create superuser
 
 * Run the development server: $ python manage.py runsever
 
