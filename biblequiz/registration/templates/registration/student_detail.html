@@ -1,7 +1,7 @@
 {% extends 'registration/base.html' %}
 {% block content %}
 <h1>Student Info</h1>
-<a class="btn btn-default" href="{% url 'student_edit' pk=student.pk %}"><span class="glyphicon-pencil"></span></a>
+<a class="btn btn-default" href="{% url 'student_edit' pk=student.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
  {{ student.full_name }}
  {{ student.email }}
  {{ student.mobile_number }}
