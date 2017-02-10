@@ -9,6 +9,7 @@ Views
 Style
 1. Better css.. for login page
 2. Better style for form
+3. Learn css/bootstrap for betting styling of all the pages
 
 Testing
 1. Write Unittest
