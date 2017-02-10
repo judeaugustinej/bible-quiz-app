@@ -1,0 +1,33 @@
+App 
+1. Add description to home page
+2. create mutliple table ie group wise table and sorted age wise.
+
+Views
+1. complete the detail view page(style and required elements)
+2. Edit the detail view.
+
+Style
+1. Better css.. for login page
+2. Better style for form
+
+Testing
+1. Write Unittest
+2. Write selenium test
+3. Coverage report and Travis Job
+
+Deployment
+1. Docker support
+2. Kuberets (learn about it man)
+3. Package the app (can it be desktop app or full blown web app which can be used by all)
+
+Future
+1. Break down the project into smaller apps
+2. Better database design, with ER diagram, init.sql scrit
+3. Triggering email and sms
+4. Column for adding hall ticket(one person has a mapping to one hall ticket)
+5. Export stored data as pdf
+
+Learning
+Payment using webapp ie receving payment online.
+
+

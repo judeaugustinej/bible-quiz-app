@@ -1,15 +1,16 @@
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.shortcuts import get_object_or_404
+from django.contrib.auth.decorators import login_required
 
 from .models import Register
 from .forms import RegisterForm
 
-
+@login_required
 def home(request):
     return render(request, 'registration/home.html', {})
 
-
+@login_required
 def register(request):
     if request.method == "POST":
         form = RegisterForm(request.POST)
@@ -23,11 +24,12 @@ def register(request):
         form = RegisterForm()
     return render(request, 'registration/register.html', {'form': form})
 
+@login_required
 def students(request):
     students = Register.objects.all()
     return render(request, 'registration/students.html', {'students': students})
 
-
+@login_required
 def student_detail(request, pk):
     student = get_object_or_404(Register, pk=pk)
     return render(request, 'registration/student_detail.html', {'student': student})

@@ -10,21 +10,24 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="/">Bible Quiz</a>
     </div>
     <div>
+      {% if user.is_authenticated %}
       <ul class="nav navbar-nav">
         <li><a href="{% url 'home' %}">Home</a></li>
         <li><a href="{% url 'register' %}">Register</a></li>
         <li><a href="{% url 'students' %}">Students</a></li>
+        <li><a href="{% url 'logout' %}">Log out</a></li>
       </ul>
+      {% endif %}
     </div>
   </div>
 </nav>
+
 
             {% block content %}
             {% endblock %}

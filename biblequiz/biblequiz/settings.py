@@ -27,6 +27,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# The URL where requests are redirected after login when the contrib.auth.login view gets no next parameter.
+# See https://docs.djangoproject.com/en/1.10/ref/settings/#login-redirect-url
+LOGIN_REDIRECT_URL = '/'
 
 # Application definition
 
