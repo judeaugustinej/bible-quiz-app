@@ -26,10 +26,10 @@ def register(request):
 
 @login_required
 def students(request):
-    group_a_students =  Register.objects.filter(group='A')
-    group_b_students =  Register.objects.filter(group='B')
-    group_c_students =  Register.objects.filter(group='C')
-    group_d_students =  Register.objects.filter(group='D')
+    group_a_students =  Register.objects.filter(group='A').order_by("age")
+    group_b_students =  Register.objects.filter(group='B').order_by("age")
+    group_c_students =  Register.objects.filter(group='C').order_by("age")
+    group_d_students =  Register.objects.filter(group='D').order_by("age")
     return render(request, 'registration/students.html', {'group_a_students': group_a_students, 'group_b_students': group_b_students, 'group_c_students': group_c_students, 'group_d_students': group_d_students,})
 
 @login_required
