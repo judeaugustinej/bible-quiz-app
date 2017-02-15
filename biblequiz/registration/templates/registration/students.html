@@ -1,14 +1,15 @@
 {% extends 'registration/base.html' %}
 
 {% block content %}
-<h1>Registered Students</h1>
+<!-- Group A students -->
+<h1>Group A</h1>
 <table class="table table-hover">
     <th>Name</th>
     <th>Language</th>
     <th>Group</th>
     <th>Age</th>
     <th>Fee Payment</th>
-{% for student in students %}
+{% for student in group_a_students %}
     <tr onclick=window.location.href="{% url 'student_detail' pk=student.pk %}">
     <td>{{ student.full_name }} </td>
     <td>{{ student.language }}</td>
@@ -22,4 +23,71 @@
 
 {% endfor %}
     </table>
+
+<!-- Group B students -->
+<h1>Group B</h1>
+<table class="table table-hover">
+    <th>Name</th>
+    <th>Language</th>
+    <th>Group</th>
+    <th>Age</th>
+    <th>Fee Payment</th>
+{% for student in group_b_students %}
+    <tr onclick=window.location.href="{% url 'student_detail' pk=student.pk %}">
+    <td>{{ student.full_name }} </td>
+    <td>{{ student.language }}</td>
+    <td>{{ student.group }}</td>
+    <td>{{ student.age }}</td>
+    <td>
+        {% if student.paid%} Paid
+        {% else %}
+        Not Paid
+    {% endif %}</td></tr>
+
+{% endfor %}
+</table>
+<!-- Group C students -->
+<h1>Group C</h1>
+<table class="table table-hover">
+    <th>Name</th>
+    <th>Language</th>
+    <th>Group</th>
+    <th>Age</th>
+    <th>Fee Payment</th>
+{% for student in group_c_students %}
+    <tr onclick=window.location.href="{% url 'student_detail' pk=student.pk %}">
+    <td>{{ student.full_name }} </td>
+    <td>{{ student.language }}</td>
+    <td>{{ student.group }}</td>
+    <td>{{ student.age }}</td>
+    <td>
+        {% if student.paid%} Paid
+        {% else %}
+        Not Paid
+    {% endif %}</td></tr>
+
+{% endfor %}
+</table>
+<!-- Group D students -->
+<h1>Group D</h1>
+<table class="table table-hover">
+    <th>Name</th>
+    <th>Language</th>
+    <th>Group</th>
+    <th>Age</th>
+    <th>Fee Payment</th>
+{% for student in group_d_students %}
+    <tr onclick=window.location.href="{% url 'student_detail' pk=student.pk %}">
+    <td>{{ student.full_name }} </td>
+    <td>{{ student.language }}</td>
+    <td>{{ student.group }}</td>
+    <td>{{ student.age }}</td>
+    <td>
+        {% if student.paid%} Paid
+        {% else %}
+        Not Paid
+    {% endif %}</td></tr>
+
+{% endfor %}
+</table>
 {% endblock %}
