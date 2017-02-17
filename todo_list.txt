@@ -1,6 +1,5 @@
 App 
 1. Add description to home page
-2. create mutliple table ie group wise table and sorted age wise.
 
 Views
 1. complete the detail view page(style and required elements)
